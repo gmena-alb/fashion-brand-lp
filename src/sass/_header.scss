@@ -12,6 +12,7 @@
   position: relative;
   padding-top: 1.5rem;
   padding-left: 2.5rem;
+  margin-bottom: 6rem;
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
