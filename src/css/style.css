@@ -340,7 +340,7 @@ section {
           z-index: 5;
           transition: margin-right 0.5s, border 0.3s; }
           .section-process .articles article:nth-child(2n) .description:hover {
-            margin-right: -10%;
+            margin-right: -8%;
             width: 32%;
             border: 2px solid #ff6083;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
@@ -353,6 +353,41 @@ section {
             margin-left: 0; }
       .section-process .articles article:last-child {
         padding-bottom: 5rem; }
+
+.section-dressmakers .articles {
+  display: flex;
+  flex: 1 1 0px;
+  justify-content: space-evenly;
+  padding: 0 5rem;
+  font-family: "Oswald", sans-serif;
+  margin-top: 6rem; }
+  .section-dressmakers .articles article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5rem;
+    width: 33%;
+    padding: 3rem 2rem; }
+    .section-dressmakers .articles article:hover .image {
+      border: 5px solid #b7445d; }
+    .section-dressmakers .articles article h3 {
+      color: #00043c;
+      margin-top: 3rem; }
+    .section-dressmakers .articles article h4 {
+      color: #b7445d;
+      margin-bottom: 2rem; }
+    .section-dressmakers .articles article p {
+      font-size: 1.1rem;
+      align-self: flex-start; }
+    .section-dressmakers .articles article .image {
+      object-fit: cover;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      border: 5px solid #d5b756;
+      z-index: 1;
+      transition: all 0.3s; }
 
 footer {
   display: grid;

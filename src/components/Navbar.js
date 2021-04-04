@@ -26,7 +26,7 @@ const Navbar = () => {
             <a href="#process-section">what we do</a>
           </li>
           <li>
-            <a href="#">dressmakers</a>
+            <a href="#dressmakers-section">dressmakers</a>
           </li>
           <li>
             <a href="#">contact</a>

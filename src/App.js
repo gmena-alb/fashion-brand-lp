@@ -3,6 +3,7 @@ import './css/style.css';
 import Header from './components/Header';
 import Fashion from './components/Fashion';
 import History from './components/History';
+import Dressmakers from './components/Dressmakers';
 import Footer from './components/Footer';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Fashion />
       <History />
+      <Dressmakers />
       <Footer />
     </main>
   );

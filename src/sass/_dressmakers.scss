@@ -1,0 +1,44 @@
+.section-dressmakers {
+  .articles {
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: space-evenly;
+    padding: 0 5rem;
+    font-family: $font-oswald;
+    margin-top: 6rem;
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 5rem;
+      width: 33%;
+      padding: 3rem 2rem;
+      &:hover .image {
+        border: 5px solid $color-secondary-dark;
+      }
+      h3 {
+        color: $color-tertiary;
+        margin-top: 3rem;
+      }
+      h4 {
+        color: $color-secondary-dark;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.1rem;
+        align-self: flex-start;
+      }
+
+      .image {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: 5px solid $color-primary-dark;
+        z-index: 1;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
