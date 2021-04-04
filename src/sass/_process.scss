@@ -1,0 +1,98 @@
+.section-process {
+  padding-top: 2rem;
+  position: relative;
+  .title {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 2rem;
+  }
+  .articles {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 15rem;
+    background: $color-primary;
+    article {
+      display: flex;
+      /* position: relative; */
+      align-items: center;
+      /* justify-content: center; */
+      /* margin-right: 40rem; */
+      padding-left: 18rem;
+      position: relative;
+      margin-bottom: 7rem;
+
+      img {
+        order: 1;
+        width: 46%;
+        min-width: 400px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .description {
+        /* position: absolute; */
+        order: 2;
+        display: inline-block;
+        margin-left: -6%;
+        width: 30%;
+        padding: 40px;
+        border: 2px solid rgba($color-secondary-dark, 0.25);
+        transition: margin-left 0.5s, border 0.3s;
+
+        &:hover {
+          margin-left: -8%;
+          width: 32%;
+          border: 2px solid $color-secondary;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        &:hover p,
+        &:hover h4 {
+          margin-left: 25%;
+        }
+        p,
+        h4 {
+          margin-left: 20%;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      &:nth-child(2n) {
+        padding-right: 18rem;
+        padding-left: 0;
+        justify-content: flex-end;
+
+        img {
+          order: 2;
+        }
+        .description {
+          order: 1;
+          margin-right: -6%;
+          margin-left: 0;
+          z-index: 5;
+          transition: margin-right 0.5s, border 0.3s;
+
+          &:hover {
+            margin-right: -10%;
+            width: 32%;
+            border: 2px solid $color-secondary;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          }
+          &:hover p,
+          &:hover h4 {
+            margin-right: 25%;
+          }
+          p,
+          h4 {
+            margin-right: 20%;
+            margin-left: 0;
+          }
+        }
+      }
+      &:last-child {
+        padding-bottom: 5rem;
+      }
+    }
+  }
+}

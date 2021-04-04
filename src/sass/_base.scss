@@ -3,10 +3,17 @@
 Colours
 ===============
 */
-$color-primary: rgb(255, 235, 96);
-$color-secondary: rgb(255, 96, 131);
-$color-secondary-dark: rgb(183, 68, 93);
-$color-tertiary: rgb(0, 4, 60);
+$color-primary: #edcb5f;
+$color-primary-dark: #d5b756;
+$color-primary-dark-1: #bea24c;
+$color-primary-dark-2: #a68e43;
+$color-primary-dark-3: #8e7a39;
+$color-primary-dark-4: #776630;
+$color-primary-dark-5: #5f5126;
+$color-secondary: #ff6083;
+$color-secondary-dark: #b7445d;
+
+$color-tertiary: #00043c;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
@@ -28,11 +35,12 @@ $font-oswald: 'Oswald', sans-serif;
 Responsive breakpoints
 ===============
 */
-$bp-largest: 75em; // 1200px
-$bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 800px;
-$bp-small: 37.5em; // 600px;
 
+$bp-even-largest: 1420px;
+$bp-largest: 1200px;
+$bp-large: 1024px;
+$bp-medium: 768px;
+$bp-small: 480px;
 /*
 =============== 
 Others
@@ -67,6 +75,9 @@ body {
   font-size: 62.5%;
   line-height: 1.5;
   padding: 2rem;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 ul {
@@ -106,12 +117,10 @@ p {
   margin-bottom: 1.25rem;
 }
 
-.section {
-  padding-bottom: 7rem;
-  height: 700px;
-  padding-bottom: 7rem;
+section {
+  margin-bottom: 10rem;
+  min-height: 700px;
   .title {
     text-align: center;
-    margin-bottom: 5rem;
   }
 }
