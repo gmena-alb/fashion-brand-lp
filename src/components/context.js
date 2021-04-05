@@ -6,7 +6,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [screenWidth, setScreenWhatever] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -16,8 +16,8 @@ const AppProvider = ({ children }) => {
   };
 
   const resizeSlider = (widthScreen) => {
-    setScreenWhatever(widthScreen);
-    console.log('screen-width' + screenWidth);
+    setScreenWidth(widthScreen);
+
     //setIsModalOpen(true);
   };
 

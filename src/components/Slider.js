@@ -28,7 +28,7 @@ const Slider = () => {
     });
     return () => window.removeEventListener('resize', event);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [resizeSlider]);
+  }, [screenWidth]);
 
   useEffect(() => {
     if (screenWidth >= 1201) {
