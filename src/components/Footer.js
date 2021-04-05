@@ -13,8 +13,8 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="footer">
-      <div class="footer-section">
-        <div class="social">
+      <div className="footer-section">
+        <div className="social">
           <h4>Follow us</h4>
           <div className="icons">
             <a href="#">
