@@ -8,7 +8,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Slider = () => {
   const [numSlidesShown, setNumSlidesShown] = useState(0);
-  const [index, setIndex] = useState(0);
+  const [indexSlider, setIndexSlider] = useState(0);
   const [lastIndex, setLastIndex] = useState(0);
 
   const modalContent = '';
@@ -52,23 +52,28 @@ const Slider = () => {
   }, [sliderData, screenWidth]);
 
   useEffect(() => {
-    if (index < 0) {
-      setIndex(lastIndex);
+    if (indexSlider < 0) {
+      setIndexSlider(lastIndex);
     }
-    if (index > lastIndex) {
-      setIndex(0);
+    if (indexSlider > lastIndex) {
+      setIndexSlider(0);
     }
-  }, [index]);
+  }, [indexSlider]);
 
   return (
     <div className="slider">
-      <button className="prev" onClick={() => setIndex(index - 1)}>
+      <button className="prev" onClick={() => setIndexSlider(indexSlider - 1)}>
         <FaChevronLeft />
       </button>
       {sliderData.map((data, index) => {
         const { id, img } = data;
         if (numSlidesShown === 3) {
-          if (index === index || index === index + 1 || index === index + 2) {
+          console.log('3 sliders');
+          if (
+            index === indexSlider ||
+            index === indexSlider + 1 ||
+            index === indexSlider + 2
+          ) {
             return (
               <>
                 <div
@@ -84,7 +89,7 @@ const Slider = () => {
             return;
           }
         } else if (numSlidesShown === 2) {
-          if (index === index || index === index + 1) {
+          if (index === indexSlider || index === indexSlider + 1) {
             return (
               <>
                 <div
@@ -100,7 +105,7 @@ const Slider = () => {
             return;
           }
         } else {
-          if (index === index) {
+          if (index === indexSlider) {
             return (
               <>
                 <div
@@ -117,7 +122,7 @@ const Slider = () => {
           }
         }
       })}
-      <button className="next" onClick={() => setIndex(index + 1)}>
+      <button className="next" onClick={() => setIndexSlider(indexSlider + 1)}>
         <FaChevronRight />
       </button>
       <div
