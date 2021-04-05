@@ -8,15 +8,11 @@ const Slider = () => {
   const [indexSlider, setIndexSlider] = useState(0);
   const [lastIndex, setLastIndex] = useState(0);
 
-  const modalContent = '';
-  const textModal = '';
   const {
     sliderData,
     screenWidth,
     resizeSlider,
     openModal,
-    closeModal,
-    isModalOpen,
   } = useGlobalContext();
 
   useEffect(() => {
@@ -24,7 +20,6 @@ const Slider = () => {
       resizeSlider(window.innerWidth);
     });
     return () => window.removeEventListener('resize', event);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [screenWidth]);
 
   useEffect(() => {
