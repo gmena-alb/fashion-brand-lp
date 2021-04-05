@@ -18,7 +18,7 @@ const outfits = [
     img:
       'https://images.unsplash.com/photo-1504782017096-947b89aacbbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     dressmaker: 1,
-    inspiration: ' man bun street art iceland PBR&B',
+    inspiration: 'man bun street art iceland PBR&B',
   },
   {
     id: 4,
