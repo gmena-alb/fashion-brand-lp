@@ -7,7 +7,6 @@ import Slider from './Slider.js';
 
 const Fashion = () => {
   /*const [outfits, setOutfits] = useState(data);*/
-  const setScreenWidth = useGlobalContext();
 
   const [index, setIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
