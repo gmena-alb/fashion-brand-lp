@@ -7,10 +7,13 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [modalContent, setModalContent] = useState({});
 
-  const openModal = () => {
+  const openModal = (data) => {
+    setModalContent(data);
     setIsModalOpen(true);
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -30,6 +33,7 @@ const AppProvider = ({ children }) => {
         closeModal,
         screenWidth,
         resizeSlider,
+        modalContent,
       }}
     >
       {children}

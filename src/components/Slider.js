@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useGlobalContext } from './context';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-
-//Cosas que necesito >>
-// JS con las imagenes
-//el tamanyo de la pantalla
+import Modal from './Modal';
 
 const Slider = () => {
   const [numSlidesShown, setNumSlidesShown] = useState(0);
@@ -68,7 +65,6 @@ const Slider = () => {
       {sliderData.map((data, index) => {
         const { id, img } = data;
         if (numSlidesShown === 3) {
-          console.log('3 sliders');
           if (
             index === indexSlider ||
             index === indexSlider + 1 ||
@@ -77,7 +73,7 @@ const Slider = () => {
             return (
               <>
                 <div
-                  onClick={() => openModal(id)}
+                  onClick={() => openModal(data)}
                   className="activeSlide card"
                   key={id}
                 >
@@ -122,33 +118,10 @@ const Slider = () => {
           }
         }
       })}
+      <Modal />
       <button className="next" onClick={() => setIndexSlider(indexSlider + 1)}>
         <FaChevronRight />
       </button>
-      <div
-        className={`${isModalOpen ? 'modal open' : 'modal closed'}`}
-        style={{
-          backgroundImage: `url(${modalContent})`,
-        }}
-      >
-        <div className="text">
-          <p>{textModal}</p>
-        </div>
-      </div>
-      <div
-        className={`${
-          isModalOpen ? 'modal-overlay open' : 'modal-overlay closed'
-        }`}
-      ></div>
-      <div
-        className={`${
-          isModalOpen ? 'close-container open' : 'close-container closed'
-        }`}
-        onClick={closeModal}
-      >
-        <div className="leftright"></div>
-        <div className="rightleft"></div>
-      </div>
     </div>
   );
   //modal()
