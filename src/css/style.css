@@ -411,6 +411,10 @@ section {
           .section-process .articles article:nth-child(2n) .description h4 {
             margin-right: 20%;
             margin-left: 0; }
+            @media screen and (max-width: 480px) {
+              .section-process .articles article:nth-child(2n) .description p,
+              .section-process .articles article:nth-child(2n) .description h4 {
+                margin-right: 0; } }
       .section-process .articles article:last-child {
         padding-bottom: 5rem; }
 
