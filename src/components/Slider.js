@@ -40,8 +40,7 @@ const Slider = () => {
     } else {
       setLastIndex(sliderData.length - 1);
     }
-    //TODO IS DATA NEEDED HERE?
-  }, [sliderData, screenWidth, setLastIndex]);
+  }, [screenWidth, lastIndex]);
 
   useEffect(() => {
     if (indexSlider < 0) {
