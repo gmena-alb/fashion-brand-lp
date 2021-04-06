@@ -20,8 +20,6 @@ const AppProvider = ({ children }) => {
 
   const resizeSlider = (widthScreen) => {
     setScreenWidth(widthScreen);
-
-    //setIsModalOpen(true);
   };
 
   return (

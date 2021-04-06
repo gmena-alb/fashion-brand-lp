@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useGlobalContext } from './context';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import Modal from './Modal';
 
 const Slider = () => {
   const [numSlidesShown, setNumSlidesShown] = useState(0);
@@ -33,6 +32,7 @@ const Slider = () => {
   }, [screenWidth]);
 
   useEffect(() => {
+    console.log(lastIndex);
     if (numSlidesShown === 3) {
       setLastIndex(sliderData.length - 3);
     } else if (numSlidesShown === 2) {
@@ -41,7 +41,7 @@ const Slider = () => {
       setLastIndex(sliderData.length - 1);
     }
     //TODO IS DATA NEEDED HERE?
-  }, [sliderData, screenWidth]);
+  }, [sliderData, screenWidth, setLastIndex]);
 
   useEffect(() => {
     if (indexSlider < 0) {
@@ -84,7 +84,7 @@ const Slider = () => {
             return (
               <>
                 <div
-                  onClick={() => openModal(id)}
+                  onClick={() => openModal(data)}
                   className="activeSlide card"
                   key={id}
                 >
@@ -100,7 +100,7 @@ const Slider = () => {
             return (
               <>
                 <div
-                  onClick={() => openModal(id)}
+                  onClick={() => openModal(data)}
                   className="activeSlide card"
                   key={id}
                 >
@@ -113,7 +113,6 @@ const Slider = () => {
           }
         }
       })}
-      <Modal />
       <button className="next" onClick={() => setIndexSlider(indexSlider + 1)}>
         <FaChevronRight />
       </button>

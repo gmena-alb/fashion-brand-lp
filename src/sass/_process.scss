@@ -6,6 +6,12 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 2rem;
+    @media screen and (max-width: $bp-small) {
+      position: inherit;
+      transform: none;
+      left: 0;
+      top: 0;
+    }
   }
   .articles {
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
@@ -13,21 +19,34 @@
     flex-direction: column;
     padding-top: 15rem;
     background: $color-primary;
+    @media screen and (max-width: $bp-small) {
+      clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+      padding-top: 8rem;
+    }
     article {
       display: flex;
-      /* position: relative; */
       align-items: center;
-      /* justify-content: center; */
-      /* margin-right: 40rem; */
       padding-left: 18rem;
       position: relative;
       margin-bottom: 7rem;
-
+      @media screen and (max-width: $bp-small) {
+        flex-direction: column;
+        margin-right: 0;
+        padding: 0 1rem 0;
+        margin-bottom: 4rem;
+      }
+      .title-mobile {
+        display: none;
+      }
       img {
         order: 1;
         width: 46%;
         min-width: 400px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @media screen and (max-width: $bp-small) {
+          width: 100%;
+          min-width: 100%;
+        }
       }
       .description {
         /* position: absolute; */
@@ -38,7 +57,18 @@
         padding: 40px;
         border: 2px solid rgba($color-secondary-dark, 0.25);
         transition: margin-left 0.5s, border 0.3s;
-
+        @media screen and (max-width: $bp-small) {
+          margin-top: 1rem;
+          width: 100%;
+          margin-left: 0;
+          padding: 0;
+          border: none;
+          border-top: 2px solid rgba($color-secondary-dark, 1);
+          padding-top: 1rem;
+          background-color: rgba($color-secondary, 0.25);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+            rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
         &:hover {
           margin-left: -8%;
           width: 32%;
@@ -50,21 +80,41 @@
         &:hover h4 {
           margin-left: 25%;
         }
+        h4 {
+          @media screen and (max-width: $bp-small) {
+            display: none;
+          }
+        }
         p,
         h4 {
           margin-left: 20%;
+          @media screen and (max-width: $bp-small) {
+            margin-left: 0;
+            padding: 0 1rem;
+          }
         }
         p {
+          font-family: $font-oswald;
           font-size: 0.9rem;
+          @media screen and (max-width: $bp-small) {
+            padding: 0 1rem;
+            text-align: justify;
+            font-size: 1rem;
+          }
         }
       }
       &:nth-child(2n) {
         padding-right: 18rem;
         padding-left: 0;
         justify-content: flex-end;
-
+        @media screen and (max-width: $bp-small) {
+          padding: 0 1rem 0;
+        }
         img {
           order: 2;
+          @media screen and (max-width: $bp-small) {
+            order: 1;
+          }
         }
         .description {
           order: 1;
@@ -72,7 +122,9 @@
           margin-left: 0;
           z-index: 5;
           transition: margin-right 0.5s, border 0.3s;
-
+          @media screen and (max-width: $bp-small) {
+            margin-right: 0;
+          }
           &:hover {
             margin-right: -8%;
             width: 32%;
