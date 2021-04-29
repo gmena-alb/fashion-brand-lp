@@ -65,15 +65,15 @@ const Slider = () => {
             index === indexSlider + 2
           ) {
             return (
-              <>
+              <div>
                 <div
+                  key={img}
                   onClick={() => openModal(data)}
                   className="activeSlide card"
-                  key={id}
                 >
                   <img src={img} alt="" className="img" />
                 </div>
-              </>
+              </div>
             );
           } else {
             return;

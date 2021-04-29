@@ -21,6 +21,7 @@ const Modal = () => {
         className={`${
           isModalOpen ? 'modal-overlay open' : 'modal-overlay closed'
         }`}
+        onClick={closeModal}
       ></div>
       <div
         className={`${

@@ -2,6 +2,8 @@
   .articles {
     display: flex;
     flex: 1 1 0px;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: space-evenly;
     padding: 0 5rem;
     font-family: $font-oswald;
